@@ -59,6 +59,7 @@ const Table = () => {
         <table>
             <thead>
                 <tr>
+                    <th></th>
                     <th>Status</th>
                     <th>Transaction ID</th>
                     <th>
@@ -77,7 +78,8 @@ const Table = () => {
                  
                     {data.map((el,i)=>(
                         <tr>
-                        <td>{el.status === "Processing" ? <p><span className={styles.dot}></span>Processing</p> :<p><span className={styles.notdot}></span>Completed</p> }</td>
+                            <td></td>
+                        <td>{el.status}</td>
                         <td>{el.id}</td>
                         <td><span>&#8377;</span>{el.amount}</td>
                         <td><span>&#8377;</span>{el.fees}</td>
